@@ -14,6 +14,8 @@ body {
   --light-bgc: #f5f4fa;
   --footer-transparent: rgba(255, 255, 255, 0.6);
   --main-title-color: #212121;
+  --team-card-color: #ffffff;
+  --header-border-color: #ececec;
 }
 
 p,
@@ -40,14 +42,27 @@ ul {
 }
 
 .container {
-  width: 1170px;
-  outline: solid red;
-  margin: auto;
+  /* outline: solid red; */
+
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* --------------------HEADER-------------------- */
 
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 .header-logo {
+  padding: 24px 0 25px 0;
+  margin-right: 93px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -57,11 +72,34 @@ ul {
   color: #000000;
 }
 
+.header-list {
+  display: flex;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-item:not(:last-child),
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 span {
   color: var(--accent-color);
 }
 
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -103,6 +141,12 @@ span {
 }
 
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 696px;
+  align-items: center;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -111,11 +155,14 @@ span {
   text-transform: uppercase;
 
   color: var(--hero-title-color);
-
-  margin-bottom: 30px;
 }
 
 .hero-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -129,6 +176,11 @@ span {
   padding: 10px 32px;
 
   cursor: pointer;
+}
+
+.hero-content {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* --------------------FEATURES-------------------- */
@@ -146,6 +198,15 @@ span {
   margin: -1px;
 }
 
+.features-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.features-item {
+  max-width: 270px;
+}
+
 .features-list-title {
   font-weight: 700;
   line-height: 1.14;
@@ -161,6 +222,10 @@ span {
 
 /* --------------------GALLERY-------------------- */
 
+.gallery {
+  padding-top: 0;
+}
+
 .gallery-title {
   font-weight: 700;
   font-size: 36px;
@@ -169,10 +234,24 @@ span {
   margin-bottom: 50px;
 }
 
+.gallery-list {
+  display: flex;
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* --------------------TEAM-------------------- */
 
 .team {
   background-color: var(--light-bgc);
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
 }
 
 .team-main-title {
@@ -188,16 +267,25 @@ span {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-top: 30px;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .team-descr {
+  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 
   color: var(--main-text-color);
+}
+
+.team-item {
+  flex-basis: calc((100% - 90px) / 4);
+  background-color: var(--team-card-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* --------------------FOOTER-------------------- */
