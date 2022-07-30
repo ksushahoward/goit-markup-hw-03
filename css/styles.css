@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: #212121;
+  color: var(--main-title-color);
   background-color: #ffffff;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -32,6 +32,20 @@ h6 {
 ul {
   margin: 0;
   padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
 .link {
@@ -106,7 +120,7 @@ span {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #212121;
+  color: var(--main-title-color);
 }
 
 .header-link:hover,
@@ -138,6 +152,7 @@ span {
 /* --------------------HERO-------------------- */
 
 .hero {
+  padding: 200px 0;
   background-color: var(--dark-bgc);
 }
 
@@ -146,12 +161,11 @@ span {
   margin-right: auto;
   margin-bottom: 30px;
   width: 696px;
-  align-items: center;
+  text-align: center;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -159,10 +173,7 @@ span {
 }
 
 .hero-btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  padding: 10px 32px;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -172,16 +183,11 @@ span {
 
   color: var(--hero-title-color);
   background-color: var(--accent-color);
-  border-radius: 4px;
-  border-color: transparent;
-  padding: 10px 32px;
-
-  cursor: pointer;
 }
 
-.hero-content {
-  padding-top: 200px;
-  padding-bottom: 200px;
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188ce8;
 }
 
 /* --------------------FEATURES-------------------- */
@@ -269,16 +275,18 @@ span {
   line-height: 1.19;
   text-align: center;
   margin-bottom: 10px;
-  margin-top: 30px;
 }
 
 .team-descr {
-  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 
   color: var(--main-text-color);
+}
+
+.team-card {
+  padding: 30px 0;
 }
 
 .team-item {
@@ -292,9 +300,15 @@ span {
 /* --------------------FOOTER-------------------- */
 
 .footer {
+  padding: 60px 0;
   background-color: var(--dark-bgc);
 }
+
 .footer-logo {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -303,10 +317,10 @@ span {
   letter-spacing: 0.03em;
 
   color: var(--hero-title-color);
+}
 
-  display: inline-block;
-  margin-top: 60px;
-  margin-bottom: 20px;
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link-adress {
@@ -319,8 +333,8 @@ span {
   color: var(--hero-title-color);
 
   display: inline-block;
-  margin-bottom: 9px;
 }
+
 .footer-email,
 .footer-tel {
   font-family: 'Roboto', sans-serif;
@@ -331,14 +345,6 @@ span {
 
   color: var(--footer-transparent);
   display: inline-block;
-}
-
-.footer-email {
-  margin-bottom: 9px;
-}
-
-.footer-tel {
-  margin-bottom: 60px;
 }
 
 .footer-email:hover,
@@ -353,6 +359,8 @@ span {
 /* --------------------PORTFOLIO-------------------- */
 
 .portfolio-btn {
+  padding: 6px 22px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -363,11 +371,6 @@ span {
 
   color: var(--main-title-color);
   background-color: var(--light-bgc);
-  border-radius: 4px;
-  border-color: transparent;
-  padding: 6px 22px;
-
-  cursor: pointer;
 }
 
 .portfolio-btn:hover,
@@ -378,9 +381,15 @@ span {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.portfolio-card {
+  padding: 20px 24px;
+  border-left: 1px solid var(--portfolio-border-color);
+  border-right: 1px solid var(--portfolio-border-color);
+  border-bottom: 1px solid var(--portfolio-border-color);
+}
+
 .portfolio-title {
   margin-bottom: 4px;
-  padding-left: 24px;
 
   font-weight: 700;
   font-size: 18px;
@@ -389,9 +398,6 @@ span {
 }
 
 .portfolio-descr {
-  padding-left: 24px;
-  padding-bottom: 20px;
-
   font-size: 16px;
   line-height: 1.88;
 
@@ -413,12 +419,4 @@ span {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-}
-
-.portfolio-card {
-  margin-top: -4px;
-  padding-top: 20px;
-  border-left: 1px solid var(--portfolio-border-color);
-  border-right: 1px solid var(--portfolio-border-color);
-  border-bottom: 1px solid var(--portfolio-border-color);
 }
